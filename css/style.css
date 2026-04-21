@@ -902,33 +902,123 @@ body {
 .contact-info-card {
   background: #fff;
   border: 1px solid var(--brand-border);
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-bottom: 1rem;
+  border-radius: 14px;
+  padding: 1.75rem 1.25rem;
+  height: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 1rem;
-  align-items: flex-start;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.contact-info-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--brand-tint);
+  box-shadow: 0 10px 24px rgba(22, 105, 122, 0.12);
 }
 .contact-info-card .icon {
-  width: 48px;
-  height: 48px;
+  width: 60px;
+  height: 60px;
   flex-shrink: 0;
   border-radius: 50%;
-  background: var(--brand-bg-soft);
+  background: linear-gradient(135deg, var(--brand-bg-soft) 0%, var(--brand-bg-tint) 100%);
   color: var(--brand-primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
+  font-size: 1.55rem;
+  box-shadow: inset 0 0 0 1px rgba(22, 105, 122, 0.1);
 }
 .contact-info-card h5 {
   font-size: 1rem;
   font-weight: 700;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--brand-primary);
 }
 .contact-info-card p {
   margin: 0;
   color: var(--brand-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+.contact-info-card p a {
+  color: var(--brand-accent-dark);
+  font-weight: 700;
+}
+
+/* ===== Service locations (服務據點) ===== */
+.location-card {
+  background: #fff;
+  border: 1px solid var(--brand-border);
+  border-radius: 14px;
+  padding: 1.5rem 1.5rem 1.25rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.location-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--brand-tint);
+  box-shadow: 0 14px 30px rgba(22, 105, 122, 0.12);
+}
+.location-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--brand-primary);
+  margin: 0 0 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--brand-bg-soft);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.location-card h3 i {
+  color: var(--brand-accent);
+}
+.location-card dl {
+  margin: 0 0 1rem;
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 0.35rem 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+.location-card dt {
+  color: var(--brand-muted);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.location-card dd {
+  margin: 0;
+  color: var(--brand-text);
+}
+.location-card dd a {
+  color: var(--brand-primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+.location-card dd a:hover {
+  color: var(--brand-accent-dark);
+  text-decoration: underline;
+}
+.location-link {
+  align-self: flex-start;
+  color: var(--brand-accent-dark);
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-decoration: none;
+  padding: 0.45rem 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+.location-link:hover {
+  color: var(--brand-primary);
+  gap: 0.65rem;
 }
 
 /* ===== About page ===== */
