@@ -182,6 +182,21 @@ body {
 .hero-visual .text-muted {
   color: rgba(255, 255, 255, 0.85) !important;
 }
+/* Hero 區的次要按鈕改亮白描邊，與深色 Teal 底圖高對比 */
+.hero .btn-brand-outline {
+  border-color: #fff;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.hero .btn-brand-outline:hover,
+.hero .btn-brand-outline:focus {
+  background-color: #fff;
+  border-color: #fff;
+  color: var(--brand-primary);
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.25);
+}
 
 /* ===== Section base ===== */
 .section {
