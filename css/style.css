@@ -550,6 +550,47 @@ body {
   position: relative;
   z-index: 1;
 }
+/* plans 頁專屬底圖：底圖偏淺，加深遮罩並用 Amber 主標以符合配色對比 */
+.page-header-plans {
+  background-image:
+    linear-gradient(180deg, rgba(15, 61, 70, 0.78) 0%, rgba(15, 61, 70, 0.92) 100%),
+    url('../images/solutions.jpg');
+}
+/* contact 頁專屬底圖 */
+.page-header-contact {
+  background-image:
+    linear-gradient(180deg, rgba(15, 61, 70, 0.78) 0%, rgba(15, 61, 70, 0.92) 100%),
+    url('../images/contact.jpg');
+}
+.page-header-plans h1 {
+  color: var(--brand-accent);              /* Amber Glow — 品牌 accent 色，與 Teal 遮罩高對比 */
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+.page-header-plans p {
+  color: #fff;
+  font-weight: 500;
+  max-width: 720px;
+  margin: 0 auto;
+  /* 用 1px 黑色描邊 + 柔和外光，確保在任何底圖上都清楚可讀 */
+  text-shadow:
+    -1px -1px 0 rgba(0, 0, 0, 0.55),
+     1px -1px 0 rgba(0, 0, 0, 0.55),
+    -1px  1px 0 rgba(0, 0, 0, 0.55),
+     1px  1px 0 rgba(0, 0, 0, 0.55),
+     0 0 14px rgba(0, 0, 0, 0.5);
+}
+.page-header-plans .breadcrumb a {
+  color: var(--brand-accent-light);        /* Amber Light — 連結可辨識 */
+}
+.page-header-plans .breadcrumb a:hover {
+  color: #fff;
+}
+.page-header-plans .breadcrumb-item.active {
+  color: var(--brand-bg-soft);
+}
+.page-header-plans .breadcrumb-item + .breadcrumb-item::before {
+  color: rgba(237, 231, 227, 0.7);
+}
 .page-header h1 {
   font-weight: 800;
   font-size: clamp(1.75rem, 3vw, 2.75rem);
@@ -558,7 +599,7 @@ body {
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 .page-header p {
-  color: rgba(255, 255, 255, 0.92);
+  color: #fff;
   max-width: 640px;
   margin: 0 auto;
   font-size: 1.05rem;
@@ -579,11 +620,6 @@ body {
 }
 .page-header .breadcrumb-item + .breadcrumb-item::before {
   color: rgba(255, 255, 255, 0.55);
-}
-.page-header p {
-  color: var(--brand-muted);
-  max-width: 640px;
-  margin: 0 auto;
 }
 
 /* ===== Plan comparison table ===== */
