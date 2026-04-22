@@ -25,33 +25,146 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 
+  <!-- Structured Data: @graph（Breadcrumb + AboutPage + Organization + Milestones）AI citation 優化 -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://example.com/" },
-      { "@type": "ListItem", "position": 2, "name": "關於我們", "item": "https://example.com/about.html" }
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://example.com/" },
+          { "@type": "ListItem", "position": 2, "name": "關於我們", "item": "https://example.com/about.html" }
+        ]
+      },
+      {
+        "@type": "AboutPage",
+        "@id": "https://example.com/about.html#aboutpage",
+        "name": "關於凱擘大寬頻｜30 年第四台寬頻技術",
+        "url": "https://example.com/about.html",
+        "inLanguage": "zh-TW",
+        "mainEntity": { "@id": "https://example.com/#organization" },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": ["h1", ".section-title h2", ".timeline-item .event h5"]
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://example.com/#organization",
+        "name": "凱擘大寬頻",
+        "alternateName": ["kbro", "凱擘寬頻"],
+        "url": "https://example.com/",
+        "logo": "https://example.com/images/logo.png",
+        "description": "成立超過 30 年的第四台寬頻業者，布建 HFC 光纖同軸混合網路與 DOCSIS 3.1 技術，提供非社區共享的獨立頻寬與雙向對稱上傳。服務涵蓋全台 8 個縣市，99.99% 連線穩定度、4.7 星 Google 評價、2000+ 五星好評。",
+        "foundingDate": "1995",
+        "numberOfEmployees": {
+          "@type": "QuantitativeValue",
+          "value": 500,
+          "unitText": "人以上"
+        },
+        "slogan": "穩定獨立頻寬、透明月租、到家服務",
+        "knowsAbout": [
+          "HFC 光纖同軸混合",
+          "DOCSIS 3.1",
+          "Cable 光纖寬頻",
+          "第四台數位有線電視",
+          "Mesh WiFi 6",
+          "4K 頻道",
+          "OTT 串流整合",
+          "家用防毒防詐",
+          "雙向對稱寬頻"
+        ],
+        "award": [
+          "4.7 星 Google 評價",
+          "2000+ 用戶五星好評",
+          "99.99% 連線穩定度"
+        ],
+        "areaServed": [
+          { "@type": "AdministrativeArea", "name": "台北市" },
+          { "@type": "AdministrativeArea", "name": "新北市" },
+          { "@type": "AdministrativeArea", "name": "桃園市" },
+          { "@type": "AdministrativeArea", "name": "新竹市" },
+          { "@type": "AdministrativeArea", "name": "新竹縣" },
+          { "@type": "AdministrativeArea", "name": "台中市" },
+          { "@type": "AdministrativeArea", "name": "彰化縣" },
+          { "@type": "AdministrativeArea", "name": "台南市" },
+          { "@type": "AdministrativeArea", "name": "屏東縣" }
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "sales",
+            "name": "申辦專線",
+            "telephone": "+886-952-999-575",
+            "areaServed": "TW",
+            "availableLanguage": ["zh-Hant"]
+          },
+          {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "name": "24 小時客服專線",
+            "telephone": "+886-809-006-899",
+            "areaServed": "TW",
+            "availableLanguage": ["zh-Hant"]
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.7",
+          "reviewCount": "2000",
+          "bestRating": "5",
+          "worstRating": "1"
+        }
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://example.com/about.html#milestones",
+        "name": "凱擘大寬頻技術演進里程碑",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "Event",
+              "name": "公司成立｜有線電視起家",
+              "startDate": "1995",
+              "description": "以類比有線電視（第四台）為主力，服務北台灣家庭。"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "Event",
+              "name": "數位有線電視全面升級",
+              "startDate": "2005",
+              "description": "導入數位機上盒，推出 HD 高畫質頻道，並開通 Cable Modem 上網服務。"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "Event",
+              "name": "HFC 光纖骨幹建置完成",
+              "startDate": "2012",
+              "description": "光纖拉至社區節點（Node），寬頻速率升級至百兆，提供 1G 以上方案。"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "Event",
+              "name": "Mesh WiFi 6 全面導入",
+              "startDate": "2024",
+              "description": "推出 Mesh WiFi 6 雙機組方案，提供透天大坪數與隔間多住宅無縫全宅覆蓋。"
+            }
+          }
+        ]
+      }
     ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "name": "關於凱擘大寬頻 - 第四台寬頻",
-    "url": "https://example.com/about.html",
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "凱擘大寬頻",
-      "foundingDate": "1995",
-      "numberOfEmployees": "500+",
-      "description": "成立超過 30 年，布建 HFC 光纖同軸混合網路與 DOCSIS 3.1 技術的第四台寬頻業者，提供非社區共享的獨立頻寬與雙向對稱上傳。",
-      "url": "https://example.com/",
-      "logo": "https://example.com/images/logo.png",
-      "sameAs": []
-    }
   }
   </script>
 </head>
