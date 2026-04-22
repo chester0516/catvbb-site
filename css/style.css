@@ -706,6 +706,43 @@ body {
   font-size: 1.2rem;
 }
 
+/* ===== Plan note highlight (備註 pill) ===== */
+.plan-note-highlight {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.25rem auto 0;
+  padding: 0.75rem 1.25rem;
+  background: linear-gradient(135deg, #fff4df 0%, #fde3b6 100%);
+  border: 1px solid var(--brand-accent-light);
+  border-radius: 999px;
+  color: var(--brand-text);
+  font-size: 0.95rem;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(255, 166, 43, 0.18);
+}
+.plan-note-highlight i {
+  color: var(--brand-accent-dark);
+  font-size: 1.1rem;
+}
+.plan-note-highlight .plan-note-label {
+  background: var(--brand-accent);
+  color: #fff;
+  font-weight: 700;
+  padding: 0.15rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+.plan-note-highlight strong {
+  color: var(--brand-primary);
+  font-weight: 800;
+}
+.plan-note-highlight .sep {
+  color: var(--brand-accent-dark);
+  opacity: 0.5;
+}
+
 /* ===== Plan recommendation cards (挑選網速) ===== */
 .recommend-card {
   background: #fff;
