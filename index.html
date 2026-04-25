@@ -35,7 +35,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 
-  <!-- Structured Data: @graph（Organization + WebSite + WebPage + FAQPage + Offers）優化 AI citation -->
+  <!-- Structured Data: @graph（Organization + WebSite + WebPage + FAQPage + Reviews + Products）AI citation 強化 -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -46,9 +46,15 @@
         "name": "凱擘大寬頻",
         "alternateName": ["kbro", "凱擘寬頻", "吳維鵬 電銷服務網站"],
         "url": "https://example.com/",
-        "logo": "https://example.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://example.com/images/logo.png",
+          "width": 150,
+          "height": 40
+        },
         "image": "https://example.com/images/tv.jpg",
-        "description": "凱擘大寬頻提供第四台寬頻（Cable 光纖上網）、數位有線電視與雙享方案。採 HFC 光纖同軸混合網路與 DOCSIS 3.1 技術，提供非社區共享的獨立頻寬與雙向對稱上傳，服務涵蓋全台 8 個縣市。",
+        "email": "service@example.com",
+        "description": "凱擘大寬頻提供第四台寬頻（Cable 光纖上網）、數位有線電視與雙享方案。採 HFC 光纖同軸混合網路與 DOCSIS 3.1 技術，提供非社區共享的獨立頻寬與雙向對稱上傳，服務涵蓋全台 8 個縣市，旗下 12 家系統台。",
         "foundingDate": "1995",
         "numberOfEmployees": {
           "@type": "QuantitativeValue",
@@ -56,24 +62,37 @@
           "unitText": "人以上"
         },
         "slogan": "第四台寬頻 × 有線電視雙享．穩定獨立頻寬",
+        "sameAs": [
+          "https://line.me/R/ti/p/@tmg6174l",
+          "https://www.kbro.com.tw/"
+        ],
         "knowsAbout": [
           "第四台寬頻",
           "Cable 光纖寬頻",
           "HFC 光纖同軸混合",
           "DOCSIS 3.1",
+          "雙向對稱頻寬",
+          "3G/1G 雙向極速",
           "數位有線電視",
           "Mesh WiFi 6",
+          "Mesh WiFi 7",
           "4K 頻道",
           "OTT 串流整合",
+          "HBO Max",
+          "MyVideo",
           "智慧家庭",
           "寬頻有線電視雙享方案"
+        ],
+        "award": [
+          "4.7 星 Google 評價（2000+ 用戶）",
+          "99.99% 連線穩定度",
+          "30 年第四台寬頻經營經驗"
         ],
         "areaServed": [
           { "@type": "AdministrativeArea", "name": "台北市" },
           { "@type": "AdministrativeArea", "name": "新北市" },
           { "@type": "AdministrativeArea", "name": "桃園市" },
           { "@type": "AdministrativeArea", "name": "新竹市" },
-          { "@type": "AdministrativeArea", "name": "新竹縣" },
           { "@type": "AdministrativeArea", "name": "台中市" },
           { "@type": "AdministrativeArea", "name": "彰化縣" },
           { "@type": "AdministrativeArea", "name": "台南市" },
@@ -86,13 +105,12 @@
             "name": "申辦專線",
             "telephone": "+886-952-999-575",
             "areaServed": "TW",
-            "availableLanguage": ["zh-Hant"],
-            "contactOption": "TollFree"
+            "availableLanguage": ["zh-Hant"]
           },
           {
             "@type": "ContactPoint",
-            "contactType": "customer service",
-            "name": "24 小時客服專線",
+            "contactType": "technical support",
+            "name": "24 小時維修專線",
             "telephone": "+886-809-006-899",
             "areaServed": "TW",
             "availableLanguage": ["zh-Hant"],
@@ -102,6 +120,13 @@
               "opens": "00:00",
               "closes": "23:59"
             }
+          },
+          {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "name": "LINE 官方帳號",
+            "url": "https://line.me/R/ti/p/@tmg6174l",
+            "availableLanguage": ["zh-Hant"]
           }
         ],
         "aggregateRating": {
@@ -118,7 +143,15 @@
         "url": "https://example.com/",
         "name": "凱擘大寬頻｜第四台寬頻",
         "inLanguage": "zh-TW",
-        "publisher": { "@id": "https://example.com/#organization" }
+        "publisher": { "@id": "https://example.com/#organization" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://example.com/?s={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
       },
       {
         "@type": "WebPage",
@@ -127,6 +160,7 @@
         "name": "凱擘大寬頻｜光纖網路、第四台業者推薦首選",
         "isPartOf": { "@id": "https://example.com/#website" },
         "about": { "@id": "https://example.com/#organization" },
+        "primaryImageOfPage": "https://example.com/images/tv.jpg",
         "inLanguage": "zh-TW",
         "speakable": {
           "@type": "SpeakableSpecification",
@@ -191,7 +225,7 @@
         "@type": "ItemList",
         "@id": "https://example.com/#plans-itemlist",
         "name": "凱擘第四台寬頻方案",
-        "numberOfItems": 3,
+        "numberOfItems": 4,
         "itemListElement": [
           {
             "@type": "ListItem",
@@ -202,13 +236,20 @@
               "description": "300M 下載 / 50M 上傳，含 100+ 頻道數位有線電視、Mesh Wi-Fi 6、網路守護家 12 個月",
               "brand": { "@id": "https://example.com/#organization" },
               "category": "家用光纖寬頻",
+              "additionalProperty": [
+                { "@type": "PropertyValue", "name": "下載速率", "value": "300", "unitText": "Mbps" },
+                { "@type": "PropertyValue", "name": "上傳速率", "value": "50", "unitText": "Mbps" },
+                { "@type": "PropertyValue", "name": "Wi-Fi 標準", "value": "Mesh Wi-Fi 6" },
+                { "@type": "PropertyValue", "name": "有線電視頻道", "value": "100+" }
+              ],
               "offers": {
                 "@type": "Offer",
                 "price": "699",
                 "priceCurrency": "TWD",
                 "availability": "https://schema.org/InStock",
                 "url": "https://example.com/plans.html",
-                "priceSpecification": { "@type": "UnitPriceSpecification", "unitText": "每月" }
+                "priceSpecification": { "@type": "UnitPriceSpecification", "unitText": "每月" },
+                "eligibleDuration": { "@type": "QuantitativeValue", "value": 24, "unitCode": "MON" }
               }
             }
           },
@@ -221,13 +262,20 @@
               "description": "500M 下載 / 50M 上傳，含 100+ 頻道數位有線電視、Mesh Wi-Fi 6 雙機組、網路守護家 12 個月",
               "brand": { "@id": "https://example.com/#organization" },
               "category": "家用光纖寬頻",
+              "additionalProperty": [
+                { "@type": "PropertyValue", "name": "下載速率", "value": "500", "unitText": "Mbps" },
+                { "@type": "PropertyValue", "name": "上傳速率", "value": "50", "unitText": "Mbps" },
+                { "@type": "PropertyValue", "name": "Wi-Fi 標準", "value": "Mesh Wi-Fi 6 雙機組" },
+                { "@type": "PropertyValue", "name": "有線電視頻道", "value": "100+" }
+              ],
               "offers": {
                 "@type": "Offer",
                 "price": "899",
                 "priceCurrency": "TWD",
                 "availability": "https://schema.org/InStock",
                 "url": "https://example.com/plans.html",
-                "priceSpecification": { "@type": "UnitPriceSpecification", "unitText": "每月" }
+                "priceSpecification": { "@type": "UnitPriceSpecification", "unitText": "每月" },
+                "eligibleDuration": { "@type": "QuantitativeValue", "value": 24, "unitCode": "MON" }
               }
             }
           },
@@ -240,15 +288,104 @@
               "description": "1G 下載 / 50M 上傳，支援 4K 高清影音、VR / 多人線上遊戲、智慧家電遠端監控",
               "brand": { "@id": "https://example.com/#organization" },
               "category": "家用光纖寬頻",
+              "additionalProperty": [
+                { "@type": "PropertyValue", "name": "下載速率", "value": "1000", "unitText": "Mbps" },
+                { "@type": "PropertyValue", "name": "上傳速率", "value": "50", "unitText": "Mbps" },
+                { "@type": "PropertyValue", "name": "Wi-Fi 標準", "value": "Mesh Wi-Fi 6" }
+              ],
               "offers": {
                 "@type": "Offer",
                 "price": "1099",
                 "priceCurrency": "TWD",
                 "availability": "https://schema.org/InStock",
                 "url": "https://example.com/plans.html",
-                "priceSpecification": { "@type": "UnitPriceSpecification", "unitText": "每月" }
+                "priceSpecification": { "@type": "UnitPriceSpecification", "unitText": "每月" },
+                "eligibleDuration": { "@type": "QuantitativeValue", "value": 24, "unitCode": "MON" }
               }
             }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "Product",
+              "name": "3G/1G 雙向極速｜北市率先登場",
+              "description": "下載 3G / 上傳 1G 雙向對稱頻寬，含 Mesh Wi-Fi 7 雙機組、HBO Max、MyVideo、四季線上 24 個月、網路守護家 24 個月",
+              "brand": { "@id": "https://example.com/#organization" },
+              "category": "雙向對稱寬頻旗艦",
+              "areaServed": { "@type": "City", "name": "台北市" },
+              "additionalProperty": [
+                { "@type": "PropertyValue", "name": "下載速率", "value": "3000", "unitText": "Mbps" },
+                { "@type": "PropertyValue", "name": "上傳速率", "value": "1000", "unitText": "Mbps" },
+                { "@type": "PropertyValue", "name": "Wi-Fi 標準", "value": "Mesh Wi-Fi 7 雙機組" },
+                { "@type": "PropertyValue", "name": "影音贈送", "value": "HBO Max + MyVideo + 四季線上 24 個月" }
+              ],
+              "offers": {
+                "@type": "Offer",
+                "price": "1699",
+                "priceCurrency": "TWD",
+                "availability": "https://schema.org/InStock",
+                "url": "https://example.com/promo-3g.html",
+                "priceSpecification": { "@type": "UnitPriceSpecification", "unitText": "每月" },
+                "eligibleDuration": { "@type": "QuantitativeValue", "value": 24, "unitCode": "MON" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://example.com/#reviews",
+        "name": "凱擘大寬頻用戶評價",
+        "numberOfItems": 6,
+        "itemListElement": [
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "王先生" },
+            "reviewBody": "Cable 光纖不卡，Netflix 跟線上會議都順，半年下來沒遇過斷線。",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "itemReviewed": { "@id": "https://example.com/#organization" },
+            "additionalProperty": { "@type": "PropertyValue", "name": "方案", "value": "500M 雙享方案" }
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "陳小姐" },
+            "reviewBody": "搬家 3 天內就把第四台寬頻裝好，續約還送升速，服務超貼心。",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "itemReviewed": { "@id": "https://example.com/#organization" },
+            "additionalProperty": { "@type": "PropertyValue", "name": "方案", "value": "1G 雙享方案" }
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "李先生" },
+            "reviewBody": "月租透明、免電路費，長輩也看得懂帳單，不會有隱藏費用。",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "itemReviewed": { "@id": "https://example.com/#organization" },
+            "additionalProperty": { "@type": "PropertyValue", "name": "方案", "value": "300M 雙享方案" }
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "吳小姐" },
+            "reviewBody": "以前社區共享網路晚上塞爆，改 Cable 光纖獨立頻寬後每天穩 500M。",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "itemReviewed": { "@id": "https://example.com/#organization" },
+            "additionalProperty": { "@type": "PropertyValue", "name": "方案", "value": "改裝光纖用戶" }
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "張先生" },
+            "reviewBody": "4K 頻道 + OTT 串流一起訂，雙享方案 CP 值超高，全家都愛看。",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "itemReviewed": { "@id": "https://example.com/#organization" },
+            "additionalProperty": { "@type": "PropertyValue", "name": "方案", "value": "1G 4K 旗艦包" }
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "林小姐" },
+            "reviewBody": "機上盒出現 E010 錯誤，打維修專線遠端授權馬上恢復，24 小時客服超穩。",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "itemReviewed": { "@id": "https://example.com/#organization" },
+            "additionalProperty": { "@type": "PropertyValue", "name": "方案", "value": "300M 雙享方案" }
           }
         ]
       }
@@ -745,7 +882,7 @@
           <h5>聯絡資訊</h5>
           <ul>
             
-            <li><i class="bi bi-telephone me-2"></i><span class="phone-num">0952-999-575</span>（申辦專線）</li>
+            <li><i class="bi bi-telephone me-2"></i><a href="tel:0952999575"><span class="phone-num">0952-999-575</span></a>（申辦專線）</li>
             <li><i class="bi bi-telephone me-2"></i>0809-006-899（24小時客服）</li>
           </ul>
         </div>
@@ -762,7 +899,7 @@
 
   <!-- ===== Floating sticky CTA ===== -->
   <div class="floating-cta" role="complementary" aria-label="快速聯絡">
-    <a href="tel:0952999575" class="fab-tel" data-label="撥打電話 0952-999-575" aria-label="撥打電話 0952-999-575">
+    <a href="tel:0952999575" class="fab-tel" data-label="撥打申辦電話 0952-999-575" aria-label="撥打申辦電話 0952-999-575">
       <i class="bi bi-telephone-fill" aria-hidden="true"></i>
     </a>
     <a href="https://line.me/R/ti/p/@tmg6174l" class="fab-line" data-label="加入 LINE 官方帳號" aria-label="加入 LINE 官方帳號" target="_blank" rel="noopener noreferrer">
