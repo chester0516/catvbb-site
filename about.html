@@ -18,6 +18,9 @@
   <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
   <link rel="dns-prefetch" href="https://images.unsplash.com">
 
+  <!-- Preload page-header 底圖（LCP 優化） -->
+  <link rel="preload" as="image" href="images/about.webp" fetchpriority="high">
+
   <link rel="preload" as="style" href="css/lib/bootstrap.min.css" fetchpriority="high">
   <link href="css/lib/bootstrap.min.css" rel="stylesheet">
   <link rel="preload" href="css/lib/bootstrap-icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="css/lib/bootstrap-icons.css"></noscript>
@@ -125,7 +128,7 @@ body {
 .hero {
   background-image:
     linear-gradient(120deg, rgba(15, 61, 70, 0.82) 0%, rgba(22, 105, 122, 0.68) 50%, rgba(72, 159, 181, 0.55) 100%),
-    url('images/tv.webp');
+    url('images/tv.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -589,12 +592,28 @@ body {
 .page-header-plans {
   background-image:
     linear-gradient(180deg, rgba(15, 61, 70, 0.78) 0%, rgba(15, 61, 70, 0.92) 100%),
-    url('images/solutions.webp');
+    url('images/solutions.jpg');
 }
 .page-header-contact {
   background-image:
     linear-gradient(180deg, rgba(15, 61, 70, 0.78) 0%, rgba(15, 61, 70, 0.92) 100%),
-    url('images/contact.webp');
+    url('images/contact.jpg');
+}
+.page-header-about {
+  background-image:
+    linear-gradient(180deg, rgba(15, 61, 70, 0.55) 0%, rgba(15, 61, 70, 0.75) 100%),
+    url('images/about.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 6rem 0 5rem;
+  min-height: 380px;
+}
+@media (min-width: 992px) {
+  .page-header-about {
+    padding: 7.5rem 0 6.5rem;
+    min-height: 460px;
+  }
 }
 .page-header-partner {
   padding: 6rem 0 5rem;
@@ -612,7 +631,7 @@ body {
 .page-header-promo3g {
   background-image:
     linear-gradient(180deg, rgba(15, 61, 70, 0.45) 0%, rgba(15, 61, 70, 0.65) 100%),
-    url('images/speed.webp');
+    url('images/speed.jpg');
   padding: 8rem 0 7rem;
   min-height: 420px;
 }
@@ -1527,7 +1546,7 @@ a.contact-info-card:hover {
     </div>
   </nav>
 
-  <section class="page-header">
+  <section class="page-header page-header-about">
     <div class="container">
       <h1>關於凱擘大寬頻｜30 年第四台寬頻技術</h1>
       <p>深耕 HFC 光纖同軸混合網路與 DOCSIS 3.1 技術，提供非社區共享的獨立頻寬第四台寬頻服務。</p>

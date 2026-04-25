@@ -617,6 +617,23 @@ body {
     linear-gradient(180deg, rgba(15, 61, 70, 0.78) 0%, rgba(15, 61, 70, 0.92) 100%),
     url('../images/contact.jpg');
 }
+/* about 頁專屬底圖：banner 加高、遮罩中等讓底圖清楚 */
+.page-header-about {
+  background-image:
+    linear-gradient(180deg, rgba(15, 61, 70, 0.55) 0%, rgba(15, 61, 70, 0.75) 100%),
+    url('../images/about.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 6rem 0 5rem;
+  min-height: 380px;
+}
+@media (min-width: 992px) {
+  .page-header-about {
+    padding: 7.5rem 0 6.5rem;
+    min-height: 460px;
+  }
+}
 /* partner 頁專屬底圖：banner 加高、遮罩淡讓底圖清楚（每頁 inline style 帶 url） */
 .page-header-partner {
   padding: 6rem 0 5rem;
