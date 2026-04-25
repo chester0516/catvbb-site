@@ -617,6 +617,20 @@ body {
     linear-gradient(180deg, rgba(15, 61, 70, 0.78) 0%, rgba(15, 61, 70, 0.92) 100%),
     url('../images/contact.jpg');
 }
+/* partner 頁專屬底圖：banner 加高、遮罩淡讓底圖清楚（每頁 inline style 帶 url） */
+.page-header-partner {
+  padding: 6rem 0 5rem;
+  min-height: 380px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media (min-width: 992px) {
+  .page-header-partner {
+    padding: 7.5rem 0 6.5rem;
+    min-height: 460px;
+  }
+}
 /* promo-3g 頁專屬底圖：banner 加高、遮罩偏淡讓速度感底圖清楚 */
 .page-header-promo3g {
   background-image:
