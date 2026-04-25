@@ -127,16 +127,30 @@ body {
   color: var(--brand-primary);
 }
 .hero {
-  background-image:
-    linear-gradient(120deg, rgba(15, 61, 70, 0.82) 0%, rgba(22, 105, 122, 0.68) 50%, rgba(72, 159, 181, 0.55) 100%),
-    url('images/tv.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   padding: 6rem 0 5rem;
   position: relative;
   overflow: hidden;
   color: #fff;
+}
+.hero-bg-img,
+.page-header-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+.hero-overlay,
+.page-header-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.hero-overlay {
+  background: linear-gradient(120deg, rgba(15, 61, 70, 0.82) 0%, rgba(22, 105, 122, 0.68) 50%, rgba(72, 159, 181, 0.55) 100%);
 }
 .hero > .container {
   position: relative;
@@ -598,25 +612,18 @@ body {
   position: relative;
   z-index: 1;
 }
-.page-header-plans {
-  background-image:
-    linear-gradient(180deg, rgba(15, 61, 70, 0.78) 0%, rgba(15, 61, 70, 0.92) 100%),
-    url('images/solutions.jpg');
+.page-header-plans .page-header-overlay {
+  background: linear-gradient(180deg, rgba(15, 61, 70, 0.78) 0%, rgba(15, 61, 70, 0.92) 100%);
 }
-.page-header-contact {
-  background-image:
-    linear-gradient(180deg, rgba(15, 61, 70, 0.78) 0%, rgba(15, 61, 70, 0.92) 100%),
-    url('images/contact.jpg');
+.page-header-contact .page-header-overlay {
+  background: linear-gradient(180deg, rgba(15, 61, 70, 0.78) 0%, rgba(15, 61, 70, 0.92) 100%);
 }
 .page-header-about {
-  background-image:
-    linear-gradient(180deg, rgba(15, 61, 70, 0.55) 0%, rgba(15, 61, 70, 0.75) 100%),
-    url('images/about.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   padding: 6rem 0 5rem;
   min-height: 380px;
+}
+.page-header-about .page-header-overlay {
+  background: linear-gradient(180deg, rgba(15, 61, 70, 0.55) 0%, rgba(15, 61, 70, 0.75) 100%);
 }
 @media (min-width: 992px) {
   .page-header-about {
@@ -627,9 +634,9 @@ body {
 .page-header-partner {
   padding: 6rem 0 5rem;
   min-height: 380px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+}
+.page-header-partner .page-header-overlay {
+  background: linear-gradient(180deg, rgba(15, 61, 70, 0.35) 0%, rgba(15, 61, 70, 0.6) 100%);
 }
 @media (min-width: 992px) {
   .page-header-partner {
@@ -638,11 +645,11 @@ body {
   }
 }
 .page-header-promo3g {
-  background-image:
-    linear-gradient(180deg, rgba(15, 61, 70, 0.45) 0%, rgba(15, 61, 70, 0.65) 100%),
-    url('images/speed.jpg');
   padding: 8rem 0 7rem;
   min-height: 420px;
+}
+.page-header-promo3g .page-header-overlay {
+  background: linear-gradient(180deg, rgba(15, 61, 70, 0.45) 0%, rgba(15, 61, 70, 0.65) 100%);
 }
 @media (min-width: 992px) {
   .page-header-promo3g {
@@ -1572,6 +1579,9 @@ a.contact-info-card:hover {
 
   <main>
   <section class="page-header page-header-about">
+    <div class="container">
+    <img src="images/about.webp" alt="" class="page-header-bg" fetchpriority="high" width="1600" height="1067" decoding="async">
+    <div class="page-header-overlay"></div>
     <div class="container">
       <h1>關於凱擘大寬頻｜30 年第四台寬頻技術</h1>
       <p>深耕 HFC 光纖同軸混合網路與 DOCSIS 3.1 技術，提供非社區共享的獨立頻寬第四台寬頻服務。</p>
