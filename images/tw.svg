@@ -4,24 +4,24 @@
 ************* Free for Commercial Use, full terms at  https://simplemaps.com/resources/svg-license ************
 ************* Attribution is appreciated! https://simplemaps.com *******************************************-->
 
-<svg baseprofile="tiny" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".6" version="1.2" viewBox="285 150 700 910" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="img" aria-label="台灣服務涵蓋地圖">
+<svg baseprofile="tiny" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".6" version="1.2" viewBox="250 150 830 920" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="img" aria-label="台灣服務涵蓋地圖">
  <defs>
   <style><![CDATA[
     path { fill: #d8dfe2; transition: fill 0.3s ease; }
-    /* 服務涵蓋縣市 — Stormy Teal */
-    path#TWTPE, path#TWNWT, path#TWTAO, path#TWHSQ, path#TWHSZ,
+    /* 服務涵蓋縣市 — Stormy Teal（8 縣市） */
+    path#TWTPE, path#TWNWT, path#TWTAO, path#TWHSZ,
     path#TWTXG, path#TWCHA, path#TWTNN, path#TWPIF {
       fill: #16697A;
       cursor: pointer;
     }
     /* Hover 變 Amber Glow */
-    path#TWTPE:hover, path#TWNWT:hover, path#TWTAO:hover, path#TWHSQ:hover, path#TWHSZ:hover,
+    path#TWTPE:hover, path#TWNWT:hover, path#TWTAO:hover, path#TWHSZ:hover,
     path#TWTXG:hover, path#TWCHA:hover, path#TWTNN:hover, path#TWPIF:hover {
       fill: #FFA62B;
     }
     /* 標籤點：只顯示服務縣市的琥珀色脈衝點 */
     #label_points circle { fill: transparent; r: 0; }
-    circle#TWTPE, circle#TWNWT, circle#TWTAO, circle#TWHSQ, circle#TWHSZ,
+    circle#TWTPE, circle#TWNWT, circle#TWTAO, circle#TWHSZ,
     circle#TWTXG, circle#TWCHA, circle#TWTNN, circle#TWPIF {
       fill: #FFA62B;
       r: 9;
@@ -33,18 +33,39 @@
     }
     circle#TWNWT { animation-delay: 0.3s; }
     circle#TWTAO { animation-delay: 0.6s; }
-    circle#TWHSQ { animation-delay: 0.9s; }
-    circle#TWHSZ { animation-delay: 1.2s; }
-    circle#TWTXG { animation-delay: 1.5s; }
-    circle#TWCHA { animation-delay: 1.8s; }
-    circle#TWTNN { animation-delay: 2.1s; }
-    circle#TWPIF { animation-delay: 2.4s; }
+    circle#TWHSZ { animation-delay: 0.9s; }
+    circle#TWTXG { animation-delay: 1.2s; }
+    circle#TWCHA { animation-delay: 1.5s; }
+    circle#TWTNN { animation-delay: 1.8s; }
+    circle#TWPIF { animation-delay: 2.1s; }
     @keyframes coverage-pulse {
       0%, 100% { opacity: 1; }
       50%      { opacity: 0.55; }
     }
     /* 定位點 — 完全隱藏 */
     #points circle { fill: transparent; r: 0; }
+    /* 引線標籤（leader lines + labels） */
+    #leader-labels line {
+      stroke: #FFA62B;
+      stroke-width: 1.6;
+      stroke-linecap: round;
+      fill: none;
+    }
+    #leader-labels .endpoint {
+      fill: #FFA62B;
+      stroke: #fff;
+      stroke-width: 1.5;
+    }
+    #leader-labels text {
+      fill: #1a1a1a;
+      stroke: none;
+      font-family: system-ui, -apple-system, "Microsoft JhengHei", "PingFang TC", sans-serif;
+      pointer-events: none;
+    }
+    #leader-labels .city {
+      font-size: 24px;
+      font-weight: 800;
+    }
   ]]></style>
  </defs>
  <g id="features">
@@ -134,5 +155,64 @@
   </circle>
   <circle class="Chiayi City" cx="556.7" cy="630.5" id="TWCYI">
   </circle>
+ </g>
+
+ <!-- 服務縣市引線 + 行政區標籤（8 縣市） -->
+ <g id="leader-labels">
+  <!-- 台北市 → 右上 -->
+  <g>
+   <polyline points="768.5,297.9 870,235 925,235" fill="none" stroke="#FFA62B" stroke-width="1.6"/>
+   <circle cx="925" cy="235" r="3.5" class="endpoint"/>
+   <text x="935" y="243" class="city">台北市</text>
+  </g>
+
+  <!-- 新北市 → 右 -->
+  <g>
+   <polyline points="763.3,342.8 870,330 925,330" fill="none" stroke="#FFA62B" stroke-width="1.6"/>
+   <circle cx="925" cy="330" r="3.5" class="endpoint"/>
+   <text x="935" y="338" class="city">新北市</text>
+  </g>
+
+  <!-- 桃園市 → 右 -->
+  <g>
+   <polyline points="703.6,320.4 850,415 925,415" fill="none" stroke="#FFA62B" stroke-width="1.6"/>
+   <circle cx="925" cy="415" r="3.5" class="endpoint"/>
+   <text x="935" y="423" class="city">桃園市</text>
+  </g>
+
+  <!-- 新竹市 → 右 -->
+  <g>
+   <polyline points="652.4,360.1 850,500 925,500" fill="none" stroke="#FFA62B" stroke-width="1.6"/>
+   <circle cx="925" cy="500" r="3.5" class="endpoint"/>
+   <text x="935" y="508" class="city">新竹市</text>
+  </g>
+
+  <!-- 台中市 → 左 -->
+  <g>
+   <polyline points="604.9,482.7 460,470 405,470" fill="none" stroke="#FFA62B" stroke-width="1.6"/>
+   <circle cx="405" cy="470" r="3.5" class="endpoint"/>
+   <text x="395" y="478" text-anchor="end" class="city">台中市</text>
+  </g>
+
+  <!-- 彰化縣 → 左 -->
+  <g>
+   <polyline points="565,532.6 460,560 405,560" fill="none" stroke="#FFA62B" stroke-width="1.6"/>
+   <circle cx="405" cy="560" r="3.5" class="endpoint"/>
+   <text x="395" y="568" text-anchor="end" class="city">彰化縣</text>
+  </g>
+
+  <!-- 台南市 → 左 -->
+  <g>
+   <polyline points="536.2,699.7 460,720 405,720" fill="none" stroke="#FFA62B" stroke-width="1.6"/>
+   <circle cx="405" cy="720" r="3.5" class="endpoint"/>
+   <text x="395" y="728" text-anchor="end" class="city">台南市</text>
+  </g>
+
+  <!-- 屏東縣 → 左下 -->
+  <g>
+   <polyline points="585.7,821.9 460,880 405,880" fill="none" stroke="#FFA62B" stroke-width="1.6"/>
+   <circle cx="405" cy="880" r="3.5" class="endpoint"/>
+   <text x="395" y="888" text-anchor="end" class="city">屏東縣</text>
+  </g>
  </g>
 </svg>

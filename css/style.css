@@ -617,6 +617,20 @@ body {
     linear-gradient(180deg, rgba(15, 61, 70, 0.78) 0%, rgba(15, 61, 70, 0.92) 100%),
     url('../images/contact.jpg');
 }
+/* promo-3g 頁專屬底圖：banner 加高、遮罩偏淡讓速度感底圖清楚 */
+.page-header-promo3g {
+  background-image:
+    linear-gradient(180deg, rgba(15, 61, 70, 0.45) 0%, rgba(15, 61, 70, 0.65) 100%),
+    url('../images/speed.jpg');
+  padding: 8rem 0 7rem;
+  min-height: 420px;
+}
+@media (min-width: 992px) {
+  .page-header-promo3g {
+    padding: 10rem 0 9rem;
+    min-height: 520px;
+  }
+}
 .page-header-plans h1 {
   color: var(--brand-accent);              /* Amber Glow — 品牌 accent 色，與 Teal 遮罩高對比 */
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
@@ -704,6 +718,71 @@ body {
   color: var(--brand-accent-dark);
   font-weight: 800;
   font-size: 1.2rem;
+}
+.plan-table .price-original,
+.plan-table s.price-original {
+  text-decoration: line-through;
+  color: var(--brand-muted);
+  font-size: 0.92rem;
+  font-weight: 400;
+}
+
+/* ===== 申辦專線電話醒目樣式 ===== */
+.phone-num {
+  color: var(--brand-accent-dark);
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  font-variant-numeric: tabular-nums;
+  font-size: 1.05em;
+  white-space: nowrap;
+}
+
+/* ===== Hot/Limited-time tag (限時 醒目膠囊) ===== */
+.tag-hot {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff4757 0%, #ff7a00 60%, #FFA62B 100%);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.18rem 0.65rem;
+  border-radius: 999px;
+  vertical-align: middle;
+  margin-left: 4px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(255, 71, 87, 0.4);
+  animation: tag-hot-pulse 1.8s ease-in-out infinite;
+}
+.tag-hot::before {
+  content: "\f7df";
+  font-family: "bootstrap-icons";
+  font-size: 0.78rem;
+  margin-right: 3px;
+  vertical-align: -1px;
+}
+@keyframes tag-hot-pulse {
+  0%, 100% {
+    box-shadow: 0 2px 8px rgba(255, 71, 87, 0.4), 0 0 0 0 rgba(255, 122, 0, 0.5);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 2px 14px rgba(255, 71, 87, 0.6), 0 0 0 6px rgba(255, 122, 0, 0);
+    transform: scale(1.06);
+  }
+}
+
+/* ===== Flagship promo card (3G/1G 雙向極速旗艦) ===== */
+.promo-card-flagship {
+  border: 2px solid var(--brand-accent);
+  box-shadow: 0 12px 30px rgba(255, 166, 43, 0.22);
+  position: relative;
+}
+.promo-card-flagship .promo-header {
+  background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-accent-dark) 100%);
+}
+.promo-card-flagship .price {
+  color: var(--brand-accent-dark);
 }
 
 /* ===== Plan note highlight (備註 pill) ===== */
@@ -948,6 +1027,12 @@ body {
   text-align: center;
   gap: 1rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+}
+a.contact-info-card:hover {
+  text-decoration: none;
+  color: inherit;
 }
 .contact-info-card:hover {
   transform: translateY(-4px);
@@ -982,6 +1067,39 @@ body {
 .contact-info-card p a {
   color: var(--brand-accent-dark);
   font-weight: 700;
+}
+
+/* ===== Partner page district badges ===== */
+.district-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+}
+.district-badge {
+  background: var(--brand-bg-soft);
+  color: var(--brand-primary);
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 1px solid var(--brand-border);
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.district-badge:hover {
+  background: var(--brand-primary);
+  color: #fff;
+  border-color: var(--brand-primary);
+  transform: translateY(-2px);
+}
+.district-badge i {
+  color: var(--brand-accent);
+}
+.district-badge:hover i {
+  color: var(--brand-accent-light);
 }
 
 /* ===== Service locations (服務據點) ===== */
@@ -1120,7 +1238,7 @@ body {
 .taiwan-map {
   display: block;
   width: 100%;
-  aspect-ratio: 700 / 910;
+  aspect-ratio: 830 / 920;
   filter: drop-shadow(0 8px 24px rgba(22, 105, 122, 0.22));
 }
 @media (min-width: 992px) {
