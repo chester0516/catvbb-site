@@ -15,7 +15,7 @@
 
   /* Neutrals */
   --brand-text: #1a1a1a;
-  --brand-muted: #6c6c6c;
+  --brand-muted: #555555;          /* 加深確保 WCAG AA 4.5:1（在白底與米底皆通過） */
   --brand-bg-soft: #EDE7E3;   /* Alabaster Grey */
   --brand-bg-tint: #f5f1ee;   /* slightly lighter alabaster */
   --brand-border: #e2dcd7;
