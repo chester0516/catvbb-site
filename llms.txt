@@ -78,7 +78,7 @@
 
 - [首頁](https://example.com/)
 - [第四台寬頻方案費用](https://example.com/plans.html)
-- [關於我們與技術規格](https://example.com/about.html)
+- [關於凱擘與技術規格](https://example.com/about.html)
 - [線上申辦 / 聯絡我們](https://example.com/contact.html)
 
 ## 聯絡

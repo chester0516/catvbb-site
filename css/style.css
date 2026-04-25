@@ -749,7 +749,7 @@ body {
   background: var(--brand-bg-tint);
 }
 .plan-table .price-highlight {
-  color: var(--brand-accent-dark);
+  color: #a85e00;
   font-weight: 800;
   font-size: 1.2rem;
 }
@@ -761,20 +761,34 @@ body {
   font-weight: 400;
 }
 
-/* ===== 申辦專線電話醒目樣式 ===== */
+/* ===== 申辦專線電話醒目樣式（WCAG AA 對比 4.5:1） ===== */
 .phone-num {
-  color: var(--brand-accent-dark);
+  color: #a85e00;
   font-weight: 800;
   letter-spacing: 0.5px;
   font-variant-numeric: tabular-nums;
   font-size: 1.05em;
   white-space: nowrap;
 }
+/* footer 與 timeline 內的標題改 h3 後維持 h5 視覺尺寸 */
+.footer-heading,
+.event-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.timeline-item .event h3.event-title {
+  margin-bottom: 0.35rem;
+  color: var(--brand-text);
+}
+.site-footer h3.footer-heading {
+  color: #fff;
+}
 
-/* ===== Hot/Limited-time tag (限時 醒目膠囊) ===== */
+/* ===== Hot/Limited-time tag (限時 醒目膠囊，WCAG AA) ===== */
 .tag-hot {
   display: inline-block;
-  background: linear-gradient(135deg, #ff4757 0%, #ff7a00 60%, #FFA62B 100%);
+  background: linear-gradient(135deg, #c0152a 0%, #c44a08 60%, #b86a00 100%);
   color: #fff;
   font-size: 0.72rem;
   font-weight: 800;
@@ -785,7 +799,7 @@ body {
   letter-spacing: 1px;
   text-decoration: none;
   white-space: nowrap;
-  box-shadow: 0 2px 8px rgba(255, 71, 87, 0.4);
+  box-shadow: 0 2px 8px rgba(192, 21, 42, 0.4);
   animation: tag-hot-pulse 1.8s ease-in-out infinite;
 }
 .tag-hot::before {

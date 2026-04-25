@@ -720,7 +720,7 @@ body {
   background: var(--brand-bg-tint);
 }
 .plan-table .price-highlight {
-  color: var(--brand-accent-dark);
+  color: #a85e00;
   font-weight: 800;
   font-size: 1.2rem;
 }
@@ -732,16 +732,29 @@ body {
   font-weight: 400;
 }
 .phone-num {
-  color: var(--brand-accent-dark);
+  color: #a85e00;
   font-weight: 800;
   letter-spacing: 0.5px;
   font-variant-numeric: tabular-nums;
   font-size: 1.05em;
   white-space: nowrap;
 }
+.footer-heading,
+.event-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.timeline-item .event h3.event-title {
+  margin-bottom: 0.35rem;
+  color: var(--brand-text);
+}
+.site-footer h3.footer-heading {
+  color: #fff;
+}
 .tag-hot {
   display: inline-block;
-  background: linear-gradient(135deg, #ff4757 0%, #ff7a00 60%, #FFA62B 100%);
+  background: linear-gradient(135deg, #c0152a 0%, #c44a08 60%, #b86a00 100%);
   color: #fff;
   font-size: 0.72rem;
   font-weight: 800;
@@ -752,7 +765,7 @@ body {
   letter-spacing: 1px;
   text-decoration: none;
   white-space: nowrap;
-  box-shadow: 0 2px 8px rgba(255, 71, 87, 0.4);
+  box-shadow: 0 2px 8px rgba(192, 21, 42, 0.4);
   animation: tag-hot-pulse 1.8s ease-in-out infinite;
 }
 .tag-hot::before {
@@ -1443,7 +1456,7 @@ a.contact-info-card:hover {
         <span class="brand-logo" aria-hidden="true"></span>
         <span class="brand-text">吳維鵬<br>電銷服務網站</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-label="開啟選單" aria-controls="mainNav" aria-expanded="false">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="mainNav">
@@ -1451,7 +1464,7 @@ a.contact-info-card:hover {
           <li class="nav-item"><a class="nav-link" href="../index.html">首頁</a></li>
           <li class="nav-item"><a class="nav-link" href="../plans.html">方案費用</a></li>
           <li class="nav-item"><a class="nav-link" href="../promo-3g.html">3G/1G 台北市雙向極速</a></li>
-          <li class="nav-item"><a class="nav-link" href="../about.html">關於我們</a></li>
+          <li class="nav-item"><a class="nav-link" href="../about.html">關於凱擘</a></li>
           <li class="nav-item"><a class="nav-link active" href="../contact.html">聯絡我們</a></li>
           <li class="nav-item ms-lg-2">
             <a class="btn btn-brand" href="tel:0952999575"><i class="bi bi-telephone-fill me-1"></i>線上申辦</a>
@@ -1461,6 +1474,7 @@ a.contact-info-card:hover {
     </div>
   </nav>
 
+  <main>
   <section class="page-header page-header-partner" style="background-image: linear-gradient(180deg, rgba(15, 61, 70, 0.35) 0%, rgba(15, 61, 70, 0.6) 100%), url('../images/partner5.webp');">
     <div class="container">
       <p class="text-uppercase mb-2 small" style="letter-spacing: 2px; color: var(--brand-accent-light);">凱擘集團系統台</p>
@@ -1513,7 +1527,7 @@ a.contact-info-card:hover {
           <a href="tel:0952999575" class="contact-info-card" aria-label="撥打申辦專線 0952-999-575">
               <div class="icon"><i class="bi bi-telephone-fill"></i></div>
               <div>
-                <h5>申辦專線</h5>
+                <h3>申辦專線</h3>
                 <p><span class="phone-num">0952-999-575</span><br>申辦、方案介紹</p>
               </div>
             </a>
@@ -1522,7 +1536,7 @@ a.contact-info-card:hover {
           <a href="https://line.me/R/ti/p/@tmg6174l" target="_blank" rel="noopener noreferrer" class="contact-info-card" aria-label="加入 LINE 官方帳號 @tmg6174l">
               <div class="icon"><i class="bi bi-line"></i></div>
               <div>
-                <h5>LINE 官方帳號</h5>
+                <h3>LINE 官方帳號</h3>
                 <p>ID：@tmg6174l<br>一對一即時諮詢第四台與寬頻方案</p>
               </div>
             </a>
@@ -1531,7 +1545,7 @@ a.contact-info-card:hover {
           <a href="https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E5%8D%97%E5%B8%82%E6%96%B0%E7%87%9F%E5%8D%80%E9%95%B7%E6%A6%AE%E8%B7%AF%E4%BA%8C%E6%AE%B5537%E8%99%9F" target="_blank" rel="noopener noreferrer" class="contact-info-card" aria-label="在 Google 地圖開啟 臺南市新營區長榮路二段537號">
               <div class="icon"><i class="bi bi-building"></i></div>
               <div>
-                <h5>門市地址</h5>
+                <h3>門市地址</h3>
                 <p>臺南市新營區<br>長榮路二段537號</p>
               </div>
             </a>
@@ -1540,7 +1554,7 @@ a.contact-info-card:hover {
           <div class="contact-info-card">
             <div class="icon"><i class="bi bi-headset"></i></div>
             <div>
-              <h5>客服專線（24h）</h5>
+              <h3>客服專線（24h）</h3>
               <p>
                 <a href="tel:066570415">(06) 657-0415</a><br>
                 <a href="tel:066567587">(06) 656-7587</a><br>
@@ -1721,15 +1735,18 @@ a.contact-info-card:hover {
     </div>
   </section>
 
+  </main>
+
+
   <footer class="site-footer">
     <div class="container">
       <div class="row g-4">
         <div class="col-md-4">
-          <h5>凱擘大寬頻 · 第四台寬頻</h5>
+          <h3 class="footer-heading">凱擘大寬頻 · 第四台寬頻</h3>
           <p>提供 Cable 光纖上網、數位有線電視與雙享方案，採 HFC + DOCSIS 3.1 技術，打造穩定、透明、到家的數位生活。</p>
         </div>
         <div class="col-md-2 col-6">
-          <h5>服務</h5>
+          <h3 class="footer-heading">服務</h3>
           <ul>
             <li><a href="../plans.html">光纖上網</a></li>
             <li><a href="../plans.html">數位有線電視</a></li>
@@ -1737,7 +1754,7 @@ a.contact-info-card:hover {
           </ul>
         </div>
         <div class="col-md-2 col-6">
-          <h5>關於</h5>
+          <h3 class="footer-heading">關於</h3>
           <ul>
             <li><a href="../about.html">公司介紹</a></li>
             <li><a href="../about.html">技術規格</a></li>
@@ -1745,7 +1762,7 @@ a.contact-info-card:hover {
           </ul>
         </div>
         <div class="col-md-4">
-          <h5>聯絡資訊</h5>
+          <h3 class="footer-heading">聯絡資訊</h3>
           <ul>
             <li><i class="bi bi-telephone me-2"></i><a href="tel:0952999575"><span class="phone-num">0952-999-575</span></a>（申辦專線）</li>
             <li><i class="bi bi-telephone me-2"></i>0809-006-899（24小時客服）</li>
