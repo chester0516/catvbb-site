@@ -28,6 +28,7 @@
   --brand-accent: #FFA62B;
   --brand-accent-dark: #e68c0f;
   --brand-accent-light: #ffc06b;
+  --brand-accent-text: #a85e00;
   --brand-secondary: #489FB5;
   --brand-tint: #82C0CC;
   --brand-text: #1a1a1a;
@@ -48,17 +49,17 @@ body {
 .btn-brand {
   background-color: var(--brand-accent);
   border-color: var(--brand-accent);
-  color: #fff;
-  font-weight: 600;
+  color: #1a1a1a;
+  font-weight: 700;
   padding: 0.65rem 1.5rem;
   border-radius: 999px;
   transition: all 0.2s ease;
 }
 .btn-brand:hover,
 .btn-brand:focus {
-  background-color: var(--brand-accent-dark);
-  border-color: var(--brand-accent-dark);
-  color: #fff;
+  background-color: var(--brand-accent-text);
+  border-color: var(--brand-accent-text);
+  color: #1a1a1a;
   transform: translateY(-1px);
   box-shadow: 0 6px 16px rgba(255, 166, 43, 0.4);
 }
@@ -366,7 +367,7 @@ body {
 .promo-card .price {
   font-size: 2rem;
   font-weight: 800;
-  color: var(--brand-accent-dark);
+  color: var(--brand-accent-text);
   margin: 0.5rem 0;
 }
 .promo-card .price small {
@@ -479,7 +480,7 @@ body {
 }
 .cta-banner .btn-light {
   background: var(--brand-accent);
-  color: #fff;
+  color: #1a1a1a;
   border-color: var(--brand-accent);
   font-weight: 700;
   border-radius: 999px;
@@ -488,7 +489,7 @@ body {
 }
 .cta-banner .btn-light:hover {
   background: var(--brand-accent-dark);
-  border-color: var(--brand-accent-dark);
+  border-color: var(--brand-accent-text);
   transform: translateY(-1px);
   box-shadow: 0 6px 16px rgba(255, 166, 43, 0.45);
 }
@@ -794,7 +795,7 @@ body {
   background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-accent-dark) 100%);
 }
 .promo-card-flagship .price {
-  color: var(--brand-accent-dark);
+  color: var(--brand-accent-text);
 }
 .plan-note-highlight {
   display: inline-flex;
@@ -812,7 +813,7 @@ body {
   box-shadow: 0 4px 12px rgba(255, 166, 43, 0.18);
 }
 .plan-note-highlight i {
-  color: var(--brand-accent-dark);
+  color: var(--brand-accent-text);
   font-size: 1.1rem;
 }
 .plan-note-highlight .plan-note-label {
@@ -828,7 +829,7 @@ body {
   font-weight: 800;
 }
 .plan-note-highlight .sep {
-  color: var(--brand-accent-dark);
+  color: var(--brand-accent-text);
   opacity: 0.5;
 }
 .recommend-card {
@@ -898,7 +899,7 @@ body {
 }
 .recommend-body .target {
   font-size: 0.92rem;
-  color: var(--brand-accent-dark);
+  color: var(--brand-accent-text);
   font-weight: 600;
   margin-bottom: 1rem;
   padding: 0.6rem 0.85rem;
@@ -1068,7 +1069,7 @@ a.contact-info-card:hover {
   line-height: 1.6;
 }
 .contact-info-card p a {
-  color: var(--brand-accent-dark);
+  color: var(--brand-accent-text);
   font-weight: 700;
 }
 .district-list {
@@ -1157,12 +1158,12 @@ a.contact-info-card:hover {
   text-decoration: none;
 }
 .location-card dd a:hover {
-  color: var(--brand-accent-dark);
+  color: var(--brand-accent-text);
   text-decoration: underline;
 }
 .location-link {
   align-self: flex-start;
-  color: var(--brand-accent-dark);
+  color: var(--brand-accent-text);
   font-weight: 700;
   font-size: 0.92rem;
   text-decoration: none;
