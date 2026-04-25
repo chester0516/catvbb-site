@@ -593,12 +593,6 @@ body {
   .site-footer .copyright-links { gap: 1rem; }
 }
 .page-header {
-  background-image:
-    linear-gradient(135deg, rgba(15, 61, 70, 0.82) 0%, rgba(22, 105, 122, 0.72) 50%, rgba(72, 159, 181, 0.68) 100%),
-    url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   padding: 5rem 0 4rem;
   text-align: center;
   position: relative;
@@ -629,7 +623,7 @@ body {
 }
 .page-header > .container {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 .page-header-plans .page-header-overlay {
   background: linear-gradient(180deg, rgba(15, 61, 70, 0.78) 0%, rgba(15, 61, 70, 0.92) 100%);
@@ -1626,8 +1620,7 @@ a.contact-info-card:hover {
   <main>
     <!-- ===== Page header ===== -->
     <section class="page-header page-header-plans">
-      <div class="container">
-    <img src="images/solutions.webp" alt="" class="page-header-bg" fetchpriority="high" width="1600" height="1067" decoding="async">
+          <img src="images/solutions.webp" alt="" class="page-header-bg" fetchpriority="high" width="1600" height="1067" decoding="async">
     <div class="page-header-overlay"></div>
     <div class="container">
         <h1>凱擘大寬頻方案費用比較</h1>

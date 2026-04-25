@@ -591,12 +591,6 @@ body {
    替換底圖：修改下方 url(...) 內的路徑即可。
    預設使用 Unsplash 光纖/網路主題圖，建議之後放自己的 images/banner.jpg */
 .page-header {
-  background-image:
-    linear-gradient(135deg, rgba(15, 61, 70, 0.82) 0%, rgba(22, 105, 122, 0.72) 50%, rgba(72, 159, 181, 0.68) 100%),
-    url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   padding: 5rem 0 4rem;
   text-align: center;
   position: relative;
@@ -627,7 +621,7 @@ body {
 }
 .page-header > .container {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 /* plans 頁專屬遮罩 */
 .page-header-plans .page-header-overlay {
