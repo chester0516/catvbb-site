@@ -425,6 +425,9 @@ body {
   border-radius: 12px;
   padding: 1.5rem;
   height: 100%;
+  /* CWV 優化：延遲渲染未進視窗的評價卡 */
+  content-visibility: auto;
+  contain-intrinsic-size: 0 200px;
 }
 .review-card .stars {
   color: #f5b301;
@@ -1143,6 +1146,9 @@ a.contact-info-card:hover {
   display: flex;
   flex-direction: column;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  /* CWV 優化：延遲渲染未進視窗的卡片，省下 main thread layout time */
+  content-visibility: auto;
+  contain-intrinsic-size: 0 320px;
 }
 .location-card:hover {
   transform: translateY(-4px);
