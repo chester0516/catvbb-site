@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FBWQJNXDNS"></script>
+  <!-- Google tag (gtag.js) - lazy-loaded after first interaction or 3s for Core Web Vitals -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-FBWQJNXDNS');
+    (function(){
+      var loaded = false;
+      function loadGA(){
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-FBWQJNXDNS';
+        document.head.appendChild(s);
+        gtag('js', new Date());
+        gtag('config', 'G-FBWQJNXDNS');
+      }
+      ['mousedown','keydown','scroll','touchstart'].forEach(function(e){
+        window.addEventListener(e, loadGA, { once: true, passive: true });
+      });
+      setTimeout(loadGA, 3000);
+    })();
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
