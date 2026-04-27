@@ -76,16 +76,16 @@
 
 ## 頁面
 
-- [首頁](https://example.com/)
-- [第四台寬頻方案費用](https://example.com/plans.html)
-- [關於凱擘與技術規格](https://example.com/about.html)
-- [線上申辦 / 聯絡我們](https://example.com/contact.html)
+- [首頁](https://kbro.net/)
+- [第四台寬頻方案費用](https://kbro.net/plans.html)
+- [關於凱擘與技術規格](https://kbro.net/about.html)
+- [線上申辦 / 聯絡我們](https://kbro.net/contact.html)
 
 ## 聯絡
 
 - 客服專線：0800-000-000（24 小時）
 - 商用 B2B 專線：0800-000-000 轉 2
-- 電子信箱：service@example.com
+- 電子信箱：service@kbro.net
 - LINE 官方：@your-brand
 - 公司地址：台北市信義區信義路五段 7 號
 - 到府安裝時間：週一至週六 09:00–18:00
