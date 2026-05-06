@@ -25,7 +25,7 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3G/1G 台北市雙向極速｜凱擘大寬頻 對稱寬頻優惠方案</title>
+  <title>3G/1G 對稱寬頻 台北申辦｜凱擘大寬頻 雙向極速光纖 $1,699 起</title>
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   <meta name="description" content="凱擘大寬頻 3G/1G 雙向極速優惠方案台北市率先登場，月租 $1,699 起，含 Mesh Wi-Fi 7、HBO Max、MyVideo、四季線上。300M/500M/1G/3G 對稱頻寬全方位選擇，多人同時上網不壅塞、上傳直播會議流暢。">
   <meta name="keywords" content="3G/1G 雙向極速, 台北市對稱寬頻, 凱擘對稱頻寬, Mesh WiFi 7, HBO Max 寬頻, 雙向 1G, 對稱 1G, 1G/1G, 500M/500M, 300M/300M">
@@ -719,6 +719,23 @@ body {
   font-size: 1.05rem;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
+.page-header .hero-cta-group .btn {
+  font-weight: 700;
+  padding: 0.7rem 1.4rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+.page-header .hero-cta-group .btn-outline-light {
+  border-width: 2px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(2px);
+}
+.page-header .hero-trust {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.95rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+.page-header .hero-trust li { white-space: nowrap; }
+.page-header .hero-trust .bi-check-circle-fill { color: #6dd47e; }
 .page-header .breadcrumb {
   --bs-breadcrumb-divider-color: rgba(255, 255, 255, 0.55);
 }
@@ -1614,7 +1631,7 @@ a.contact-info-card:hover {
           <li class="nav-item"><a class="nav-link" href="about.html">關於凱擘</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">聯絡我們</a></li>
           <li class="nav-item ms-lg-2">
-            <a class="btn btn-brand" href="tel:0952999575"><i class="bi bi-telephone-fill me-1"></i>申辦專線0952-999-575</a>
+            <a class="btn btn-brand" href="tel:0952999575" data-cta="promo3g-nav-tel"><i class="bi bi-telephone-fill me-1"></i>申辦專線0952-999-575</a>
           </li>
         </ul>
       </div>
@@ -1628,6 +1645,19 @@ a.contact-info-card:hover {
     <div class="container">
       <h1>3G/1G 雙向極速｜台北市率先登場</h1>
       <p>對稱頻寬全新升級，3G 下載 / 1G 上傳，多人同時上網不壅塞、視訊會議直播流暢不卡頓</p>
+      <div class="hero-cta-group d-flex flex-wrap justify-content-center gap-3 mt-4">
+        <a class="btn btn-brand btn-lg" href="tel:0952999575" data-cta="promo3g-hero-tel">
+          <i class="bi bi-telephone-fill me-2"></i>立即申辦 0952-999-575
+        </a>
+        <a class="btn btn-outline-light btn-lg" href="#plans-section" data-cta="promo3g-hero-scroll">
+          看 4 種方案 <i class="bi bi-arrow-down ms-1"></i>
+        </a>
+      </div>
+      <ul class="hero-trust list-unstyled d-flex flex-wrap justify-content-center gap-3 mt-3 mb-0">
+        <li><i class="bi bi-check-circle-fill me-1"></i>台北市率先登場</li>
+        <li><i class="bi bi-check-circle-fill me-1"></i>內含 Mesh Wi-Fi 7</li>
+        <li><i class="bi bi-check-circle-fill me-1"></i>3–5 工作天到府安裝</li>
+      </ul>
     </div>
   </section>
 
@@ -1686,7 +1716,7 @@ a.contact-info-card:hover {
   </section>
 
   <!-- ===== 4 種速率方案 ===== -->
-  <section class="section section-soft">
+  <section class="section section-soft" id="plans-section">
     <div class="container">
       <div class="section-title">
         <h2>4 種對稱寬頻方案</h2>
@@ -1709,7 +1739,7 @@ a.contact-info-card:hover {
                 <li><i class="bi bi-check-circle-fill"></i> 24 個月合約</li>
                 <li><i class="bi bi-check-circle-fill"></i> MyVideo + HBO Max +四季線上OTT串流服務 24 個月</li>
               </ul>
-              <a href="tel:0952999575" class="btn btn-brand"><i class="bi bi-telephone-fill me-1"></i>立即申辦</a>
+              <a href="tel:0952999575" class="btn btn-brand" data-cta="promo3g-plan-300m-tel"><i class="bi bi-telephone-fill me-1"></i>立即申辦</a>
             </div>
           </div>
         </div>
@@ -1730,7 +1760,7 @@ a.contact-info-card:hover {
                 <li><i class="bi bi-check-circle-fill"></i> 守護家 12 個月</li>
                 <li><i class="bi bi-check-circle-fill"></i> MyVideo + HBO Max +四季線上OTT串流服務 24 個月</li>
               </ul>
-              <a href="tel:0952999575" class="btn btn-brand"><i class="bi bi-telephone-fill me-1"></i>立即申辦</a>
+              <a href="tel:0952999575" class="btn btn-brand" data-cta="promo3g-plan-500m-tel"><i class="bi bi-telephone-fill me-1"></i>立即申辦</a>
             </div>
           </div>
         </div>
@@ -1751,7 +1781,7 @@ a.contact-info-card:hover {
                 <li><i class="bi bi-check-circle-fill"></i> 守護家 24 個月</li>
                 <li><i class="bi bi-check-circle-fill"></i> MyVideo + HBO Max +四季線上OTT串流服務 24 個月</li>
               </ul>
-              <a href="tel:0952999575" class="btn btn-brand"><i class="bi bi-telephone-fill me-1"></i>立即申辦</a>
+              <a href="tel:0952999575" class="btn btn-brand" data-cta="promo3g-plan-1g-tel"><i class="bi bi-telephone-fill me-1"></i>立即申辦</a>
             </div>
           </div>
         </div>
@@ -1772,7 +1802,7 @@ a.contact-info-card:hover {
                 <li><i class="bi bi-check-circle-fill"></i> 守護家 24 個月</li>
                 <li><i class="bi bi-check-circle-fill"></i> HBO Max / MyVideo / 四季線上 24 個月</li>
               </ul>
-              <a href="tel:0952999575" class="btn btn-brand"><i class="bi bi-telephone-fill me-1"></i>立即申辦</a>
+              <a href="tel:0952999575" class="btn btn-brand" data-cta="promo3g-plan-3g-tel"><i class="bi bi-telephone-fill me-1"></i>立即申辦</a>
             </div>
           </div>
         </div>
@@ -1853,6 +1883,17 @@ a.contact-info-card:hover {
     </div>
   </section>
 
+  <!-- ===== 中段 CTA ===== -->
+  <section class="cta-banner cta-banner-mid">
+    <div class="container">
+      <h2 class="h3 mb-2">看完條件，要先聊聊涵蓋與優惠嗎？</h2>
+      <p class="mb-3 opacity-75">直接電話確認你家是否在台北市對稱寬頻覆蓋範圍，並取得專員專屬優惠</p>
+      <a href="tel:0952999575" class="btn btn-light btn-lg" data-cta="promo3g-mid-tel">
+        <i class="bi bi-telephone-fill me-2"></i>撥打申辦專線 0952-999-575
+      </a>
+    </div>
+  </section>
+
   <!-- ===== 重要條款 ===== -->
   <section class="section">
     <div class="container">
@@ -1881,12 +1922,60 @@ a.contact-info-card:hover {
     </div>
   </section>
 
+  <!-- ===== FAQ ===== -->
+  <section class="section section-soft" id="faq">
+    <div class="container">
+      <div class="section-title">
+        <h2>常見問題</h2>
+        <p>申辦前最常被問到的問題，先看這裡</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <div class="accordion" id="promo3gFaq">
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">3G/1G 雙向極速方案有哪些速率可選？月租多少？</button></h3>
+              <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#promo3gFaq"><div class="accordion-body">提供 4 種對稱寬頻方案：300M/300M $799/月、500M/500M $899/月、1G/1G $999/月、3G/1G $1,699/月，皆為 24 個月合約。</div></div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">3G/1G 雙向對稱寬頻服務範圍是哪裡？</button></h3>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#promo3gFaq"><div class="accordion-body">雙向對稱方案率先在台北市開通（HFC + DOCSIS 3.1 升級網路），其他縣市將陸續推出。</div></div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">對稱頻寬與一般非對稱寬頻有什麼差別？</button></h3>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#promo3gFaq"><div class="accordion-body">對稱頻寬指下載與上傳速度相同，適合視訊會議、直播、雲端備份、4K 上傳等高上傳需求情境，相較一般非對稱方案的低上傳速率（如 1G/40M），對稱寬頻可讓多人同時上網不壅塞、上傳直播會議流暢不卡頓。</div></div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">申辦時需要負擔哪些費用？</button></h3>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#promo3gFaq"><div class="accordion-body">新申辦用戶需繳交：寬頻裝機費 NT$1,000（原價 $1,500）、設備保證金 NT$500（合約終止後無息退還）、有線電視服務裝機費（依主管機關核定）。</div></div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">提前退租會被收費嗎？</button></h3>
+              <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#promo3gFaq"><div class="accordion-body">合約期間內提前退租任一服務，須補繳 NT$2,000 元專案設定費，影音服務優惠亦隨之提前終止。</div></div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">1G/1G 與 3G/1G 旗艦方案的影音服務內容是什麼？到期後如何計費？</button></h3>
+              <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#promo3gFaq"><div class="accordion-body">包含 HBO Max 標準方案（Full HD 雙設備）、MyVideo 豪華月租、四季線上頻道，免費享用 24 個月。到期後 HBO Max $160/月、MyVideo $480/季續訂，到期前 14 天會以簡訊或帳單通知。</div></div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">Mesh Wi-Fi 設備如果損壞或遺失怎麼辦？</button></h3>
+              <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#promo3gFaq"><div class="accordion-body">合約期間內 Mesh Wi-Fi 設備應妥善保管，人為損壞或遺失須全額賠償；合約期滿未續約須歸還設備。</div></div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8">如何申辦 3G/1G 雙向極速方案？</button></h3>
+              <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#promo3gFaq"><div class="accordion-body">撥打申辦專線 0952-999-575，由凱擘大寬頻電銷服務專員協助查詢台北市涵蓋範圍與專屬優惠，3–5 個工作天內到府安裝。</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== CTA ===== -->
   <section class="cta-banner">
     <div class="container">
       <h2>準備體驗 3G/1G 雙向極速？</h2>
       <p class="mb-4 opacity-75">台北市率先登場，撥打 <span class="phone-num">0952-999-575</span> 申辦專線，3–5 個工作天內到府安裝</p>
-      <a href="tel:0952999575" class="btn btn-light btn-lg">
+      <a href="tel:0952999575" class="btn btn-light btn-lg" data-cta="promo3g-bottom-tel">
         <i class="bi bi-telephone-fill me-2"></i>立即申辦 0952-999-575
       </a>
     </div>
@@ -1938,10 +2027,10 @@ a.contact-info-card:hover {
 
   <!-- ===== Floating sticky CTA ===== -->
   <div class="floating-cta" role="complementary" aria-label="快速聯絡">
-    <a href="tel:0952999575" class="fab-tel" data-label="撥打申辦電話 0952-999-575" aria-label="撥打申辦電話 0952-999-575">
+    <a href="tel:0952999575" class="fab-tel" data-cta="promo3g-fab-tel" data-label="撥打申辦電話 0952-999-575" aria-label="撥打申辦電話 0952-999-575">
       <i class="bi bi-telephone-fill" aria-hidden="true"></i>
     </a>
-    <a href="https://line.me/R/ti/p/@tmg6174l" class="fab-line" data-label="加入 LINE 官方帳號" aria-label="加入 LINE 官方帳號" target="_blank" rel="noopener noreferrer">
+    <a href="https://line.me/R/ti/p/@tmg6174l" class="fab-line" data-cta="promo3g-fab-line" data-label="加入 LINE 官方帳號" aria-label="加入 LINE 官方帳號" target="_blank" rel="noopener noreferrer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true">
         <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
       </svg>
@@ -1949,5 +2038,17 @@ a.contact-info-card:hover {
   </div>
 
   <script src="css/lib/bootstrap.bundle.min.js" defer></script>
+  <script>
+    // GA4 CTA click tracking (event-delegated)
+    document.addEventListener('click', function (e) {
+      var el = e.target.closest('[data-cta]');
+      if (!el || typeof gtag !== 'function') return;
+      gtag('event', 'cta_click', {
+        cta_id: el.dataset.cta,
+        cta_text: (el.textContent || '').trim().slice(0, 60),
+        page_path: location.pathname
+      });
+    });
+  </script>
 </body>
 </html>

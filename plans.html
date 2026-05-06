@@ -122,6 +122,35 @@ body {
   background-color: var(--brand-primary);
   color: #fff;
 }
+.quick-card {
+  background: #fff;
+  border: 1px solid var(--brand-border, #e8e0da);
+  border-radius: 1rem;
+  position: relative;
+  transition: transform .2s, box-shadow .2s;
+}
+.quick-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+.quick-card-hot { border-color: var(--brand-primary); border-width: 2px; }
+.quick-card .quick-badge {
+  display: inline-block;
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--brand-primary);
+  background: var(--brand-bg-soft, #f6efe7);
+  border-radius: 999px;
+  padding: 0.35rem 1.1rem;
+}
+.quick-card .quick-tag-hot {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  font-size: 0.75rem;
+  background: var(--brand-primary);
+  color: #fff;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-weight: 700;
+}
 .navbar-brand-custom {
   background-color: #ffffff;
   border-bottom: 1px solid var(--brand-border);
@@ -1637,7 +1666,7 @@ a.contact-info-card:hover {
               <a class="nav-link" href="contact.html">聯絡我們</a>
             </li>
             <li class="nav-item ms-lg-2">
-              <a class="btn btn-brand" href="tel:0952999575"><i class="bi bi-telephone-fill me-1"></i>申辦專線0952-999-575</a>
+              <a class="btn btn-brand" href="tel:0952999575" data-cta="plans-nav-tel"><i class="bi bi-telephone-fill me-1"></i>申辦專線0952-999-575</a>
             </li>
           </ul>
         </div>
@@ -1658,8 +1687,50 @@ a.contact-info-card:hover {
       </div>
     </section>
 
+    <!-- ===== Quick selector：哪個方案適合我 ===== -->
+    <section class="section section-soft" id="quick-selector">
+      <div class="container">
+        <div class="section-title">
+          <h2>哪個方案適合我？60 秒快速判斷</h2>
+          <p>依家中人數與使用情境，找到最划算的速率</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-4">
+            <div class="quick-card text-center p-4 h-100">
+              <div class="quick-badge">300M</div>
+              <h3 class="h5 mt-3">小家庭・日常追劇</h3>
+              <p class="text-muted small mb-3">1–2 人、看 YouTube / Netflix、視訊會議偶爾用</p>
+              <a href="#broadband-plans" class="btn btn-brand-outline btn-sm" data-cta="plans-quick-300m">看 300M 方案</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="quick-card quick-card-hot text-center p-4 h-100">
+              <span class="quick-tag-hot">熱門</span>
+              <div class="quick-badge">500M</div>
+              <h3 class="h5 mt-3">居家工作・3–4 人家庭</h3>
+              <p class="text-muted small mb-3">多裝置同時上網、雲端會議、4K 串流</p>
+              <a href="#broadband-plans" class="btn btn-brand btn-sm" data-cta="plans-quick-500m">看 500M 方案</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="quick-card text-center p-4 h-100">
+              <div class="quick-badge">1G</div>
+              <h3 class="h5 mt-3">重度使用・大坪數</h3>
+              <p class="text-muted small mb-3">4K 影音 / 線上遊戲 / VR / 多智慧裝置</p>
+              <a href="#broadband-plans" class="btn btn-brand-outline btn-sm" data-cta="plans-quick-1g">看 1G 方案</a>
+            </div>
+          </div>
+        </div>
+        <p class="text-center text-muted small mt-4 mb-0">
+          <i class="bi bi-info-circle me-1"></i>不確定的話，撥
+          <a href="tel:0952999575" data-cta="plans-quick-helper-tel" class="fw-bold">0952-999-575</a>
+          由專員依使用情境推薦
+        </p>
+      </div>
+    </section>
+
     <!-- ===== Broadband plans ===== -->
-    <section class="section">
+    <section class="section" id="broadband-plans">
       <div class="container">
         <div class="section-title">
           <h2>光纖上網費用</h2>
@@ -1699,7 +1770,7 @@ a.contact-info-card:hover {
                     <i class="bi bi-check-circle-fill"></i> 網路守護家12個月
                   </li>
                 </ul>
-                <a href="tel:0952999575" class="btn btn-brand"><i class="bi bi-telephone-fill me-1"></i>立即申辦</a>
+                <a href="tel:0952999575" class="btn btn-brand" data-cta="plans-broadband-300m-tel"><i class="bi bi-telephone-fill me-1"></i>立即申辦</a>
               </div>
             </div>
           </div>
@@ -1723,7 +1794,7 @@ a.contact-info-card:hover {
                     <i class="bi bi-check-circle-fill"></i> 網路守護家12個月
                   </li>
                 </ul>
-                <a href="tel:0952999575" class="btn btn-brand"><i class="bi bi-telephone-fill me-1"></i>立即申辦</a>
+                <a href="tel:0952999575" class="btn btn-brand" data-cta="plans-broadband-500m-tel"><i class="bi bi-telephone-fill me-1"></i>立即申辦</a>
               </div>
             </div>
           </div>
@@ -1750,7 +1821,7 @@ a.contact-info-card:hover {
                     <i class="bi bi-check-circle-fill"></i> 網路守護家24個月
                   </li>
                 </ul>
-                <a href="tel:0952999575" class="btn btn-brand"><i class="bi bi-telephone-fill me-1"></i>立即申辦</a>
+                <a href="tel:0952999575" class="btn btn-brand" data-cta="plans-broadband-1g-tel"><i class="bi bi-telephone-fill me-1"></i>立即申辦</a>
               </div>
             </div>
           </div>
@@ -1827,7 +1898,7 @@ a.contact-info-card:hover {
                   >
                 </td>
                 <td>
-                  <a href="contact.html" class="btn btn-brand btn-sm">申辦</a>
+                  <a href="contact.html" class="btn btn-brand btn-sm" data-cta="plans-tv-basic-100ch">申辦</a>
                 </td>
               </tr>
               <tr>
@@ -1836,7 +1907,7 @@ a.contact-info-card:hover {
                 <td>新聞 / 戲劇 / 綜藝 / 兒童 / 高級餐 / HBO Max標準方案</td>
                 <td><span class="price-highlight">$490~$550 + $49</span></td>
                 <td>
-                  <a href="contact.html" class="btn btn-brand btn-sm">申辦</a>
+                  <a href="contact.html" class="btn btn-brand btn-sm" data-cta="plans-tv-hbomax-200ch">申辦</a>
                 </td>
               </tr>
               <tr>
@@ -1845,7 +1916,7 @@ a.contact-info-card:hover {
                 <td>新聞 / 戲劇 / 綜藝 / 兒童 / 高級餐 / MyVideo</td>
                 <td><span class="price-highlight">$599</span></td>
                 <td>
-                  <a href="contact.html" class="btn btn-brand btn-sm">申辦</a>
+                  <a href="contact.html" class="btn btn-brand btn-sm" data-cta="plans-tv-myvideo-200ch">申辦</a>
                 </td>
               </tr>
             </tbody>
@@ -1885,7 +1956,7 @@ a.contact-info-card:hover {
                     <i class="bi bi-check-circle-fill"></i> 網路守護家12個月
                   </li>
                 </ul>
-                <a href="tel:0952999575" class="btn btn-brand"><i class="bi bi-telephone-fill me-1"></i>立即申辦</a>
+                <a href="tel:0952999575" class="btn btn-brand" data-cta="plans-combo-300m-tel"><i class="bi bi-telephone-fill me-1"></i>立即申辦</a>
               </div>
             </div>
           </div>
@@ -1909,7 +1980,7 @@ a.contact-info-card:hover {
                     <i class="bi bi-check-circle-fill"></i> 網路守護家12個月
                   </li>
                 </ul>
-                <a href="tel:0952999575" class="btn btn-brand"><i class="bi bi-telephone-fill me-1"></i>立即申辦</a>
+                <a href="tel:0952999575" class="btn btn-brand" data-cta="plans-combo-500m-tel"><i class="bi bi-telephone-fill me-1"></i>立即申辦</a>
               </div>
             </div>
           </div>
@@ -1938,7 +2009,7 @@ a.contact-info-card:hover {
                     <i class="bi bi-check-circle-fill"></i> 網路守護家24個月
                   </li>
                 </ul>
-                <a href="tel:0952999575" class="btn btn-brand"><i class="bi bi-telephone-fill me-1"></i>立即申辦</a>
+                <a href="tel:0952999575" class="btn btn-brand" data-cta="plans-combo-1g-tel"><i class="bi bi-telephone-fill me-1"></i>立即申辦</a>
               </div>
             </div>
           </div>
@@ -1973,7 +2044,7 @@ a.contact-info-card:hover {
                   <li>觀看高畫質影片</li>
                   <li>視訊通話順暢聯繫</li>
                 </ul>
-                <a href="contact.html" class="btn btn-brand-outline btn-sm">申辦 300M 方案</a>
+                <a href="contact.html" class="btn btn-brand-outline btn-sm" data-cta="plans-recommend-300m">申辦 300M 方案</a>
               </div>
             </article>
           </div>
@@ -1996,7 +2067,7 @@ a.contact-info-card:hover {
                   <li>串流高畫質影片</li>
                   <li>線上遊戲不延遲</li>
                 </ul>
-                <a href="contact.html" class="btn btn-brand-outline btn-sm">申辦 500M 方案</a>
+                <a href="contact.html" class="btn btn-brand-outline btn-sm" data-cta="plans-recommend-500m">申辦 500M 方案</a>
               </div>
             </article>
           </div>
@@ -2020,7 +2091,7 @@ a.contact-info-card:hover {
                   <li>智慧家電 / 遠端監控的智慧家庭生活</li>
                   <li>大坪數、室內死角與隔間也能高速穩定</li>
                 </ul>
-                <a href="contact.html" class="btn btn-brand-outline btn-sm">申辦 1G 方案</a>
+                <a href="contact.html" class="btn btn-brand-outline btn-sm" data-cta="plans-recommend-1g">申辦 1G 方案</a>
               </div>
             </article>
           </div>
@@ -2135,7 +2206,7 @@ a.contact-info-card:hover {
         <p class="mb-4 opacity-75">
           留下聯絡資料，專員依您的使用習慣、家庭成員數、商用情境推薦最適合的寬頻雙享組合
         </p>
-        <a href="tel:0952999575" class="btn btn-light btn-lg">
+        <a href="tel:0952999575" class="btn btn-light btn-lg" data-cta="plans-bottom-tel">
           <i class="bi bi-telephone-fill me-2"></i>立即聯絡專員
         </a>
       </div>
@@ -2207,6 +2278,7 @@ a.contact-info-card:hover {
       <a
         href="tel:0952999575"
         class="fab-tel"
+        data-cta="plans-fab-tel"
         data-label="撥打申辦電話 0952-999-575"
         aria-label="撥打申辦電話 0952-999-575"
       >
@@ -2215,6 +2287,7 @@ a.contact-info-card:hover {
       <a
         href="https://line.me/R/ti/p/@tmg6174l"
         class="fab-line"
+        data-cta="plans-fab-line"
         data-label="加入 LINE 官方帳號"
         aria-label="加入 LINE 官方帳號"
         target="_blank"
@@ -2239,5 +2312,17 @@ a.contact-info-card:hover {
       src="css/lib/bootstrap.bundle.min.js"
       defer
     ></script>
+    <script>
+      // GA4 CTA click tracking (event-delegated)
+      document.addEventListener('click', function (e) {
+        var el = e.target.closest('[data-cta]');
+        if (!el || typeof gtag !== 'function') return;
+        gtag('event', 'cta_click', {
+          cta_id: el.dataset.cta,
+          cta_text: (el.textContent || '').trim().slice(0, 60),
+          page_path: location.pathname
+        });
+      });
+    </script>
   </body>
 </html>
