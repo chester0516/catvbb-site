@@ -1,0 +1,21 @@
+{
+  "name": "kbro-site",
+  "private": true,
+  "version": "0.0.0",
+  "description": "凱擘大寬頻 / kbro.net marketing site — static HTML deployed via GitHub Pages.",
+  "scripts": {
+    "lint": "npm run lint:html && npm run lint:css",
+    "lint:html": "html-validate \"**/*.html\" --ignore-path .gitignore",
+    "lint:css": "stylelint \"css/style.css\" \"*.html\" \"partner/*.html\"",
+    "lh:autorun": "lhci autorun",
+    "lh:collect": "lhci collect",
+    "lh:assert": "lhci assert"
+  },
+  "devDependencies": {
+    "@lhci/cli": "^0.14.0",
+    "html-validate": "^9.0.0",
+    "postcss-html": "^1.7.0",
+    "stylelint": "^16.0.0",
+    "stylelint-config-standard": "^36.0.0"
+  }
+}
