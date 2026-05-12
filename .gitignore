@@ -23,3 +23,9 @@ Thumbs.db
 
 # Claude Code local settings
 .claude/settings.local.json
+
+# Node / npm
+node_modules/
+
+# Lighthouse CI
+.lighthouseci/

@@ -1,0 +1,41 @@
+{
+  "ci": {
+    "collect": {
+      "staticDistDir": ".",
+      "url": [
+        "http://localhost/index.html",
+        "http://localhost/plans.html",
+        "http://localhost/promo-3g.html",
+        "http://localhost/about.html",
+        "http://localhost/contact.html",
+        "http://localhost/partner/daanwenshan.html",
+        "http://localhost/partner/fengmeng.html",
+        "http://localhost/partner/guansheng.html",
+        "http://localhost/partner/hsinchuzhendao.html",
+        "http://localhost/partner/jinpindao.html",
+        "http://localhost/partner/nantian.html",
+        "http://localhost/partner/northtaoyuan.html",
+        "http://localhost/partner/quanlian.html",
+        "http://localhost/partner/xinpindao.html",
+        "http://localhost/partner/xintaipei.html",
+        "http://localhost/partner/xintangcheng.html",
+        "http://localhost/partner/yangmingshan.html"
+      ],
+      "numberOfRuns": 1,
+      "settings": {
+        "preset": "desktop"
+      }
+    },
+    "assert": {
+      "assertions": {
+        "categories:performance":    ["warn",  { "minScore": 0.80 }],
+        "categories:accessibility":  ["error", { "minScore": 0.90 }],
+        "categories:best-practices": ["warn",  { "minScore": 0.85 }],
+        "categories:seo":            ["error", { "minScore": 0.95 }]
+      }
+    },
+    "upload": {
+      "target": "temporary-public-storage"
+    }
+  }
+}
