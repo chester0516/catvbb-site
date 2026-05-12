@@ -5,7 +5,7 @@
   "description": "凱擘大寬頻 / kbro.net marketing site — static HTML deployed via GitHub Pages.",
   "scripts": {
     "lint": "npm run lint:html && npm run lint:css",
-    "lint:html": "html-validate \"**/*.html\" --ignore-path .gitignore",
+    "lint:html": "html-validate \"*.html\" \"partner/*.html\"",
     "lint:css": "stylelint \"css/style.css\" \"*.html\" \"partner/*.html\"",
     "lh:autorun": "lhci autorun",
     "lh:collect": "lhci collect",
