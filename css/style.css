@@ -1318,6 +1318,16 @@ a.contact-info-card:hover {
   color: var(--brand-accent-light);
 }
 
+/* ===== Partner related links cards ===== */
+a[data-cta^="partner-related-"] {
+  color: var(--brand-primary);
+  transition: color 0.2s ease;
+}
+
+a[data-cta^="partner-related-"]:hover {
+  color: var(--brand-primary-dark);
+}
+
 /* ===== Service locations (服務據點) ===== */
 .location-card {
   background: #fff;
