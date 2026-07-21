@@ -21,8 +21,13 @@ npm-debug.log*
 # OS-generated
 Thumbs.db
 
-# Claude Code local settings
+# Claude Code local settings（含個人機器絕對路徑，不進版控；
+# .claude/launch.json 為共用設定，刻意保留追蹤）
 .claude/settings.local.json
+.claude/settings.json
+
+# 本機工作輸出（plan / PR 描述等），非網站內容
+outputs/
 
 # Node / npm
 node_modules/
